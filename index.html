@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smoothie Isle</title>
+	<link rel="stylesheet" href="style.css">
+
+
+	<link rel="icon" type="image/png" href="./smoothie.png"/>
+</head>
+<body>
+    <section>
+        <div class="circle">
+
+        </div>
+        <header>
+            <a href="#"><img src="smoothie.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2><span>Smoothie Isle</span><br>A day without a smoothie, is a day without sunshine!</h2>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="food1.png" class="smoothie">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="food1.png" onclick="imgSlider('img1.png');changeCircleColor('#f39a65')"></li>
+            <li><img src="food2.png" onclick="imgSlider('img2.png');changeCircleColor('#cc8b93')"></li>
+            <li><img src="food3.png" onclick="imgSlider('img3.png');changeCircleColor('#9b93c6')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+            <li><a href="#"><img src="discord.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.smoothie').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
